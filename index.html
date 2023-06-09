@@ -71,15 +71,15 @@ color: var(--lwc-colorBackgroundButtonBrand,rgb(235, 100, 40)) !important;
 </style>
 <script type='text/javascript'>
 var initESW = function(gslbBaseURL) {
+embedded_svc.settings.extraPrechatFormDetails = [{  
+    "label":"Test",
+    "value":”200”,
+    "transcriptFields":[ "Test__c" ],
+    "displayToAgent":false
+}];
 // Required if you want labels in a language that’s different from your user’s context.
 embedded_svc.menu.settings.language = 'pt_PT'; //For example, enter 'en' or 'en-US'
 	
-        embedded_svc.settings.extraPrechatFormDetails = [ {
-            "label": "Test",
-            "value": "Sales",
-            "transcriptFields":[ "Test__c" ],
-            "displayToAgent": false
-        } ];
 		embedded_svc.menu.init(
 			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
 			'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
