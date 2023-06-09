@@ -74,11 +74,6 @@ var initESW = function(gslbBaseURL) {
 // Required if you want labels in a language that’s different from your user’s context.
 embedded_svc.menu.settings.language = 'pt_PT'; //For example, enter 'en' or 'en-US'
 
-var mensaje = {
-  parametro1: "valor1"
-};
-window.parent.postMessage(mensaje, "*");
-
 		embedded_svc.menu.init(
 			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
 			'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
