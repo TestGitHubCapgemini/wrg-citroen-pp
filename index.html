@@ -75,12 +75,9 @@ var initESW = function(gslbBaseURL) {
 // Required if you want labels in a language that’s different from your user’s context.
 embedded_svc.menu.settings.language = 'pt_PT'; //For example, enter 'en' or 'en-US'
 	
-embedded_svc.menu.settings.extraPrechatFormDetails = [{  
-    "label":"Test",
-    "value": "Texto",
-    "transcriptFields":[ "Test__c" ],
-    "displayToAgent":true
-}];
+embedded_svc.liveAgentAPI.sendCustomEvent(
+					"Customer_to_agent_event_type",
+					"data from the customer");
 	
 		embedded_svc.menu.init(
 			'https://psa-customerfirst--devhotfix.sandbox.my.salesforce.com',
